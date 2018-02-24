@@ -9,7 +9,8 @@ for word in words:
     if word not in u_words:
         u_words.append(word)
     else:
-        not_unique.append(word)
+        if word not in not_unique:
+            not_unique.append(word)
 
 for word in not_unique:
     u_words.pop(u_words.index(word))
